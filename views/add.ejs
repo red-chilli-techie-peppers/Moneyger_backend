@@ -1,0 +1,95 @@
+
+  <%- include("partials/header") -%>
+
+<body  id="body" style="background-color:white">
+    <div class="flex justify-center pt-10">
+        <div class="block p-6 rounded-lg shadow-2xl bg-slate-50 max-w-sm"  style="background-color:#f4f6f7;" id="card">
+            <div class="flex justify-end">
+                <button type="button" class=" inline-block px-10 py-2.5  bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">log out</button>
+                </div>
+                <div class="bg-slate-50 h-4"  style="background-color:#f4f6f7;" id="card1"></div>
+          <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2" style="color:black" id="w1">Add your new expense here:</h5>
+          <div class="bg-slate-50 h-4"  style="background-color:#f4f6f7;" id="card2"></div>
+          <p class="text-gray-700 text-base mb-2" style="color:black" id="w2">
+            + for increase / - for decrease
+            </p>
+            <form action="/add" method="post">
+        <div class="bg-slate-50 h-4"  style="background-color:#f4f6f7;" id="card3"></div>
+        <p class="text-gray-700 text-base mb-2" style="color:black" id="w13">
+          Enter name of item purchased :
+          </p>
+      <div class="bg-slate-50 h-3"  style="background-color:#f4f6f7;" id="card14"></div>
+        <input type="text" name="items" placeholder="name" autocomplete="off" class="border-2 rounded-lg active:border-black py-3 px-10 ">
+        <div class="bg-slate-50 h-4"  style="background-color:#f4f6f7;" id="card13"></div>
+        <p class="text-gray-700 text-base mb-2" style="color:black" id="w3">
+            Enter amount increased/decreased by:
+            </p>
+        <div class="bg-slate-50 h-3"  style="background-color:#f4f6f7;" id="card4"></div>
+          <input type="number" name="addItem" placeholder="amount" autocomplete="off" class="border-2 rounded-lg active:border-black py-3 px-10 ">
+        <div class="bg-slate-50 h-6"  style="background-color:#f4f6f7;" id="card5"></div>
+   
+          <button type="submit" class=" inline-block px-10 py-2.5  bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg 
+          focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg 
+          transition duration-150 ease-in-out">Add</button>
+        </form>
+        </div>
+      </div>
+      <br>
+      <div class="flex justify-center">
+        <button type="button" id="b1" class=" inline-block px-10 py-2.5  bg-blue-600 text-white font-medium 
+        text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Turn on Dark Mode</button> 
+      </div> 
+      <script>
+        var body=document.querySelector("#body");
+     var b1=document.querySelector("#b1");
+     var b1t=document.getElementById('b1');
+     var card=document.querySelector("#card");
+     var card1=document.querySelector("#card1");
+     var card2=document.querySelector("#card2");
+     var card3=document.querySelector("#card3");
+     var card4=document.querySelector("#card4");
+     var card5=document.querySelector("#card5");
+     var card13=document.querySelector("#card14");
+     var card14=document.querySelector("#card13");
+     var w1=document.querySelector("#w1");
+     var w2=document.querySelector("#w2");
+     var w3=document.querySelector("#w3");
+     var w13=document.querySelector("#w13");
+     b1.addEventListener('click',buttonclick);
+     function buttonclick(e){
+       if(body.style.backgroundColor=="white"){
+        body.style.backgroundColor="black";
+        w1.style.color="white";
+        w2.style.color="white";
+        w3.style.color="white";
+        w13.style.color="white";
+        card.style.backgroundColor="#383838";
+        card1.style.backgroundColor="#383838";
+        card2.style.backgroundColor="#383838";
+        card3.style.backgroundColor="#383838";
+        card4.style.backgroundColor="#383838";
+        card5.style.backgroundColor="#383838";
+        card13.style.backgroundColor="#383838";
+        card14.style.backgroundColor="#383838";
+        b1t.innerHTML="Turn off Dark Mode";
+       }
+       else if(body.style.backgroundColor=="black"){
+        body.style.backgroundColor="white";
+        card.style.backgroundColor="#f4f6f7";
+        card1.style.backgroundColor="#f4f6f7";
+        card2.style.backgroundColor="#f4f6f7";
+        card3.style.backgroundColor="#f4f6f7";
+        card4.style.backgroundColor="#f4f6f7";
+        card5.style.backgroundColor="#f4f6f7";
+        card13.style.backgroundColor="#f4f6f7";
+        card14.style.backgroundColor="#f4f6f7";
+        w1.style.color="black";
+        w2.style.color="black";
+        w3.style.color="black";
+        w13.style.color="black";
+        b1t.innerHTML="Turn on Dark Mode";
+       }
+     }
+      </script>
+</body>
+</html>
