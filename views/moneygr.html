@@ -8,24 +8,42 @@
     <title>MONEYGER</title>
    <script src=" https://cdn.tailwindcss.com"></script>
     <link rel="icon" href="monegr.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+    href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
 </head>
 <body >
   <style>
-    html{
-      scroll-behavior: smooth;
-    }
+      body{
+            font-family: 'Baloo Tamma 2', cursive;
+           }
     .fa {  
-  padding: 20px;  
-text-align: center;  
+  padding: 20px;   
   margin: 5px 2px;  
-  font-size: 30px;  
+  font-size: 20px;  
   width: 25px;  
 }  
-body{
-  font-family: 'Baloo Tamma 2', cursive;
-}
+input[type="email"]::placeholder { 
+                  text-align: left;
+                  font-size: 20px;
+                  padding-top: 2px;
+                  padding-bottom: 3px;
+              }
+input[type="password"]::placeholder { 
+                  text-align: left;
+                  font-size: 20px;
+                  padding-top: 2px;
+                  padding-bottom: 3px;
+              }
+input[type="text"]::placeholder { 
+                  text-align: left;
+                  font-size: 20px;
+                  padding-top: 2px;
+                  padding-bottom: 3px;
+              }
 #id01{
   animation: animatezoom 0.6s;
 }
@@ -122,6 +140,9 @@ body{
     </div> 
     <div class="bg-slate-50 flex justify-around py-4"  >
         <ul class="px-28 py-12 flex flex-wrap justify-center  lg:space-x-11 md:space-x-9 sm:space-x-0">
+            <!-- <li > <div class="max-w-sm rounded overflow-hidden shadow-lg pb-3 hover:shadow-2xl" style="background-color:#f4f6f7;" id="a1" >
+                <img class="w-full" src="https://web.uploads.tide.co/2020/10/27141343/traditional-vs-automated-expense-management-1-1024x735.png" alt="Sunset in the mountains" style="width:400px;height:370px;">
+              </div> </li> -->
            <li>   <div class="flex justify-center bg-slate-50">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg hover:shadow-2xl"  style="background-color:#f4f6f7;" id="a1">
                   <img class="w-full" src="https://web.uploads.tide.co/2020/10/27141343/traditional-vs-automated-expense-management-1-1024x735.png" alt="Sunset in the mountains" style="width:400px;height:370px;">
@@ -181,177 +202,142 @@ body{
             </ul>
         </nav>
   
-        <div  class="flex justify-center  my-0 lg:pl-96 md:pl-40 sm:pl-12 "style="display:none;top:0px;position:fixed;overflow-y: scroll !important;overflow-y:hidden;height:100%;width:100%; box-shadow: inset 0px 0px 600px 370px rgba(0, 0, 0, .7); " id="id01">
-            <div class="max-w-sm  rounded overflow-hidden shadow-lg  border-2 border-slate-900 bg-slate-100" style="overflow:hidden; " id="backme">
-              <div class="flex justify-end">
-               <button class="py-1 px-2 bg-red-700 border-2 border-slate-900 justify-end" id="hui">x</button>
-              </div>
-                <div class="px-6 py-4">
+        <div  class="flex justify-center   lg:pl-96 md:pl-40 sm:pl-12 "style="display:none;top:0px;position:fixed;overflow-y: scroll !important;overflow-y:hidden;height:100%;width:100%; box-shadow: inset 0px 0px 600px 370px rgba(0, 0, 0, .7); " id="id01">
+            <div class="max-w-sm   overflow-hidden shadow-lg   rounded-xl bg-slate-200" style="overflow:hidden; " id="backme">
+     
+                <button class="  justify-start" id="hui"><i class="fa fa-window-close " style="color:red"></i></button>
+        
+                <div class="px-6 py-0">
                   <div class="font-bold text-xl mb-1  text-center" id="dd">Sign-Up/Login</div>
-                  <div class="flex justify-center">
+                  <div class="flex justify-center ">
                     <button class="py-3 px-8  bg-cyan-500  border-2 border-black  text-black hover:bg-slate-600 hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black" id="signup_button">SIGN UP</button>
                     <button class="py-3 px-10  bg-cyan-500 border-2 border-black  text-black hover:bg-slate-600 hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black" id="login_button">Login</button>
-                </div>
-                <div class="px-6" style="padding-left:50px;padding-top:0px;padding-bottom:0px;visibility: hidden;" id="login">
-                  <span class="font-bold text-lg" style="color:black;">Email</span>
-                </div>
+                </div></div>
+                <form action="/login" method="post">
+                <div class="px-6 pt-1" style="padding-left:40px;"  >
+                 
+                      <input type="email" name="username" placeholder="&#xf0e0; Email"  class="border-2 rounded-lg active:border-black px-10 fa" id="login1" style="height:30px;visibility:hidden;width: 300px;z-index:1;display:none;">
+                 
               </div>
-              <form action="/login" method="post">
-                <div class="px-6" style="padding-left:50px;" >
-                   
-                        <input type="email" name="username" placeholder="xyz@gmail.com"  class="border-2 rounded-lg active:border-black px-10 " id="login1" style="height:50px;visibility:hidden;width: 300px;">
+                <div class="px-6 pt-0.5" style="padding-left:40px;"  >
                   
-                </div>
-                <div class="px-6" style="padding-left:70px;padding-top:10px;padding-bottom:10px;visibility: hidden;" id="login2">
-                    <span class="font-bold text-lg"  style="color:black;">Password</span>
-                  </div>
-                  <div class="px-6 pt-0" style="padding-left:50px;"  >
-                     
-                          <input type="password" name="pwd" placeholder="password" class="border-2 rounded-lg active:border-black px-10" id="login3t" style="height:50px;visibility:hidden;width: 300px;">
+                        <input type="password" name="pwd" placeholder="&#xf023; Password" class="border-2 rounded-lg active:border-black  fa" id="login3t" style="height:30px;visibility:hidden;width: 300px;z-index:1;display:none;">
                     
+                </div>
+             
+                <div class="flex justify-end px-10 pt-1 ">
+                  <button type="submit" class=" px-8 bg-cyan-500  rounded-lg shadow-2xl text-black hover:bg-slate-600  hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black"  id="login4" style="height:50px;visibility:hidden;z-index:1;display:none;" ><b>Submit</b></button>
+                </div>
+              </form>
+           <div class="flex justify-around my-0"> 
+                  <div class="px-6 py-0">
+                <div class="px-6 pt-0 ">
+                  <form action="/signup" method="post">
+                  <div >
+                        <input type="text" name="name"  placeholder="&#xf2be; Name" class="border-2 rounded-lg active:border-black  fa" id="login7"  style="height:30px;width: 300px;z-index: 1.5;display:none;"></div>
+                   
+                </div>
+                <div class="px-6 pt-1" >
+                    <form>
+                        <input type="email" name="email" placeholder="&#xf0e0; Email"  class="border-2 rounded-lg active:border-black fa"  id="login77" style="height:30px;width: 300px;z-index: 1.5;display:none;">
+                 
+                </div>
+                  <div class="px-6 pt-1" >
+                      <form>
+                          <input type="password"  name="pwd" placeholder="&#xf023; Password"  id="login9" class="border-2 rounded-lg active:border-black fa"  style="height:30px;width: 300px;z-index: 1.5;display:none;">
+                      
                   </div>
-                  <div class="flex justify-end px-6 pb-0 ">
-                    <button class=" px-3 bg-cyan-500  rounded-lg shadow-2xl text-black hover:bg-slate-600  hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black"  id="login4" style="padding-left:50px;height:50px;visibility:hidden;padding-top:0px;" type="submit"><b>Submit</b></button>
-                  </div>
-                </form>
-             <div class="flex justify-around my-0"> 
-                    <div class="px-6 py-4">
-                      <form action="/signup" method="post">
-                  <div class="px-6 pt-0 pb-2" style="padding-right:1000px;" id="login16">
-                    <span class="font-bold text-xl" style="color:black;">Name</span>
-                  </div>
-                  <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login7">
+                    <div class="px-6 pt-1" >
+                      
+                            <input type="password" name="cpwd" placeholder="&#xf023; Confirm Password"  id="login12"  class="border-2 rounded-lg active:border-black fa"  style="height:30px;width: 300px;z-index: 1.5;display:none;">
                      
-                          <input type="text" name="name" placeholder="name"  class="border-2 rounded-lg active:border-black py-3 px-10">
-                      
-                  </div>
-                  <div class="px-6 pt-4 pb-2" style="padding-right:1000px;color:black;" id="login6">
-                    <span class="font-bold text-xl" id="sa12" style="color:black;">Email</span>
-                  </div>
-                  <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login77">
-                     
-                          <input type="email" name="email" placeholder="xyz@gmail.com"  class="border-2 rounded-lg active:border-black py-3 px-10">
-                      
-                  </div>
-                  <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login8">
-                      <span class="font-bold text-xl" id="sa13" style="color:black;">Password</span>
                     </div>
-                    <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login9">
-                      
-                            <input type="password" id="pwd" name="pwd" placeholder="password"  class="border-2 rounded-lg active:border-black py-3 px-10">
-                       
-                    </div>
-                    <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login11">
-                        <span class="font-bold text-xl" id="sa18" style="color:black;">Confirm Password</span>
-                      </div>
-                      <div class="px-6 pt-4 pb-2" style="padding-right:1000px;" id="login12">
-                        
-                              <input type="password" id="pwd" name="cpwd" placeholder="password"  class="border-2 rounded-lg active:border-black py-3 px-10">
-                         
-                      </div>
-                    <div class="flex justify-end px-6 pt-4 pb-2 " style="padding-left:0px;" id="login10">
-                      <button type="submit" class="py-3 px-8  bg-cyan-500  rounded-lg shadow-2xl text-black hover:bg-slate-600 hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black">Submit</button>
-                    </div>
+                  
+                  <div class="flex justify-end px-6 pt-4 pb-2 " >
+                    <button  type="submit" class="py-3 px-8  bg-cyan-500  rounded-lg shadow-2xl text-black hover:bg-slate-600 hover:text-white  hover:border-2 active:bg-slate-900  hover:border-black" style="z-index: 1.5;display:none;" id="login10">Submit</button>
                   </form>
-            </div> </div>
+                  </div></div>
+             </div>
          </div>
-              <script>
-                  var td=document.getElementById("login_button");
-                  var tdd=document.getElementById("signup_button");
-                 var tt=document.querySelector("#login");
-                 var tt1=document.querySelector("#login1");
-                 var tt2=document.querySelector("#login2");
-                 var tt3=document.getElementById("login3t");
-                 var tt4=document.querySelector("#login4");
-                 var tt44=document.getElementById("login4");
-                 var tt66=document.querySelector("#login6");
-                 var tt77=document.querySelector("#login7");
-                 var tt88=document.querySelector("#login8");
-                 var tt99=document.querySelector("#login9");
-                 var tt100=document.querySelector("#login10");
-                 var tt111=document.querySelector("#login11");
-                 var tt122=document.querySelector("#login12");
-                 var tt161=document.querySelector("#login16");
-                 var tt777=document.querySelector("#login77");
-                //  var dark1=document.getElementById("dark1");
-                 var backme=document.querySelector("#backme");
+         <script>
+          var td=document.getElementById("login_button");
+          var tdd=document.getElementById("signup_button");
+         var tt1=document.querySelector("#login1");
+         var tt3=document.getElementById("login3t");
+         var tt4=document.querySelector("#login4");
+         var tt44=document.getElementById("login4");
+         var tt77=document.querySelector("#login7");
+         var tt99=document.querySelector("#login9");
+         var tt100=document.querySelector("#login10");
+         var tt122=document.querySelector("#login12");
+         var tt777=document.querySelector("#login77");
+         var hui=document.getElementById("hui");
+         var ddh=document.querySelector("#ddh");
+         var backme=document.querySelector("#backme");
                  var hui=document.getElementById("hui");
                  var ddh=document.querySelector("#ddh");
                  var modal = document.querySelector('#id01');
                  var tt6=document.getElementById("dd");
                  var dd=document.querySelector("#dd");
-                 hui.addEventListener('click',buttonclick3);
+         var tt6=document.getElementById("dd");
+         hui.addEventListener('click',buttonclick3);
+         hui.addEventListener('click',buttonclick3);
                  function buttonclick3(e){
                    modal.style.display="none";
                  }
-                 tdd.addEventListener('click',buttonclick1);
-                 function buttonclick1(e){
-                  tt44.innerHTML="";
-                  tt4.style.visibility="hidden";
-                  tt4.style.height="0px";
-                  tt4.style.paddingTop="0px";
-                    tt6.innerHTML="Sign Up";
-                    tt.innerHTML="<b>→ WELCOME HERE,</b>";
-                    tt.style.visibility="visible";
-                    tt1.style.height="0px";
-                    tt1.style.width="0px";
-                    tt1.style.visibility="hidden";
-                    tt2.style.paddingBottom="0px";
-                    tt2.style.paddingTop="0px";
-                    tt2.innerHTML="<b>→ WRITE YOUR DETAILS</b>";
-                    tt2.style.visibility="visible";
-                    tt3.style.height="0px";
-                    tt3.style.width="0px";
-                    tt3.style.visibility="hidden";
-                    tt4.style.paddingLeft="1000px";
-                     tt66.style.paddingRight="0px";
-                     tt77.style.paddingRight="00px";
-                     tt88.style.paddingRight="00px";
-                     tt99.style.paddingRight="00px";
-                     tt100.style.paddingRight="00px";
-                     tt111.style.paddingRight="00px";
-                     tt122.style.paddingRight="00px";
-                     tt161.style.paddingRight="00px";
-                     tt777.style.paddingRight="00px";
-                
-                 }
-                td.addEventListener('click',buttonclick);
-                function buttonclick(e){
-                  tt44.innerHTML="<b>Submit</b>"
-                  tt4.style.paddingTop="1px";
-                  tt1.style.width="300px";
-                  tt1.style.height="50px";
-                  tt2.style.paddingBottom="10px";
-                    tt2.style.paddingTop="10px";
-                    tt1.style.visibility="visible";
-                  tt4.style.visibility="visible";
-                    tt6.innerHTML="Login";
-                    tt4.style.height="50px";
-                     tt.style.paddingLeft="50px";
-                     tt.innerHTML="<b>Email</b>";
-                     tt2.innerHTML="<b>Password</b>"
-                    tt2.style.paddingLeft="70px";
-                    tt3.style.height="50px";
-                    tt3.style.width="300px"
-                    tt3.style.visibility="visible";
-                    tt4.style.paddingLeft="25px";
-                    tt66.style.paddingRight="1000px";
-                     tt77.style.paddingRight="1000px";
-                     tt88.style.paddingRight="1000px";
-                     tt99.style.paddingRight="1000px";
-                     tt100.style.paddingRight="1000px";
-                     tt111.style.paddingRight="1000px";
-                     tt122.style.paddingRight="1000px";
-                     tt161.style.paddingRight="1000px";
-                     tt777.style.paddingRight="1000px";
-                     tt.style.visibility="visible";
-                     tt2.style.visibility="visible";
-                }
-                window.onclick = function(event) {
+         tdd.addEventListener('click',buttonclick1);
+         function buttonclick1(e){
+        tt99.style.display="block";
+          tt44.innerHTML="";
+          tt4.style.visibility="hidden";
+          tt4.style.height="0px";
+        
+            tt6.innerHTML="Sign Up";
+            tt1.style.display="none";
+            tt3.style.display="none";
+            tt1.style.height="0px";
+           tt1.style.width="0px";
+            tt1.style.visibility="hidden";
+            tt1.style.height="0px";
+            tt3.style.height="0px";
+          tt3.style.width="0px";
+            tt3.style.visibility="hidden";
+         
+          tt77.style.display="block";
+          tt100.style.display="block";
+   
+            tt122.style.display="block";
+            tt777.style.display="block";
+            tt4.style.display="none";
+        
+         }
+        td.addEventListener('click',buttonclick);
+        function buttonclick(e){ 
+          tt4.style.display="block";
+          tt122.style.display="none";
+          tt99.style.display="none";
+          tt777.style.display="none";
+          tt1.style.display="block";
+            tt3.style.display="block";
+          tt44.innerHTML="<b>Submit</b>"
+        
+          tt1.style.width="300px";
+          tt1.style.height="30px";
+            tt1.style.visibility="visible";
+          tt4.style.visibility="visible";
+            tt6.innerHTML="Login";
+            tt4.style.height="50px";
+            tt3.style.height="30px";
+            tt3.style.width="300px";
+            tt3.style.visibility="visible";
+          tt77.style.display="none";
+            tt100.style.display="none";
+        } window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-              </script>
+      </script>
+            
     </body>
 </html>
